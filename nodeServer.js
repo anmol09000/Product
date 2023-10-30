@@ -131,7 +131,7 @@ var users = [
     email: "jackwick@gmail",
   },
 ];
-const port = 2410;
+var port = process.env.PORT||2410;
 app.post("/empapp/loginuser", function (req, res) {
   let body = { email: req.body.email, password: req.body.password };
   let obj = users.find(
