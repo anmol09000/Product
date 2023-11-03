@@ -10,7 +10,7 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Methods", "GET,POST,DELETE,PUT,OPTIONS");
   next();
 });
-const port= 2450;
+var port=process.env.PORT||2450;
 app.listen(port, () => console.log(`Node app listening on port ${port}!`));
 
 let pageSize=3;
